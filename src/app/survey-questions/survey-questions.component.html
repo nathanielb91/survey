@@ -1,0 +1,78 @@
+<div class="container">
+  <div *ngIf="!surveyComplete; else complete">
+    <h3 class="top-statement">Please answer the following questions</h3>
+    <form [formGroup]="surveyForm">
+      <ul>
+        <mat-card>
+          <li>
+            <label>Why is the sky blue?</label>
+            <mat-radio-group
+              aria-labelledby="example-radio-group-label"
+              class="example-radio-group"
+              formControlName="q1answer">
+              <mat-radio-button class="example-radio-button" *ngFor="let option of q1options" [value]="option">
+                {{option}}
+              </mat-radio-button>
+            </mat-radio-group>
+          </li>
+        </mat-card>
+        <br>
+        <br>
+        <mat-card>
+          <li>
+            <label>When you come to a fork in the road, and there are no options left, which way do you go?</label>
+            <mat-radio-group
+              aria-labelledby="example-radio-group-label"
+              class="example-radio-group"
+              formControlName="q2answer">
+              <mat-radio-button class="example-radio-button" *ngFor="let option of q2options" [value]="option">
+                {{option}}
+              </mat-radio-button>
+            </mat-radio-group>
+          </li>
+        </mat-card><br><br>
+        <mat-card>
+          <li>
+            <label>What color are the eyes of the most interesting person you know? (select all that apply)</label><br>
+            <mat-form-field appearance="fill">
+              <mat-label>Colors</mat-label>
+              <mat-select formControlName="q3answer" [(value)]="q3answer" multiple>
+                <mat-option *ngFor="let color of eyeColors" [value]="color">{{ color }}</mat-option>
+              </mat-select>
+            </mat-form-field><br>
+          </li>
+        </mat-card><br><br>
+        <mat-card>
+          <li>
+            <label>Examine your surroundings. How many green things do you see?</label>
+            <div class="input-form">
+              <mat-form-field class="input-form-full-width">
+                <input type="number" matInput placeholder="Ex. 6" formControlName="q4answer">
+              </mat-form-field>
+            </div>
+          </li>
+        </mat-card><br><br>
+        <mat-card>
+          <li>
+            <label>What did/would you name your first pet goat?</label>
+            <div class="input-form">
+              <mat-form-field class="input-form-full-width">
+                <input type="string" matInput placeholder="Ex. Goaty McGoatface" formControlName="q5answer">
+              </mat-form-field>
+            </div>
+          </li>
+        </mat-card>  
+      </ul>
+      <button mat-raised-button color="primary" type="submit" class="submit" (click)="submit()">Submit</button><br><br>
+    </form>
+  </div>
+</div>
+<ng-template #complete>
+  <div class="survey-complete-container">
+    <div class="survey-complete">
+      <mat-card> 
+        <h3>Thank you for taking our survey!</h3>
+      </mat-card>
+    </div>
+  </div>
+</ng-template>

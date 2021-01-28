@@ -1,0 +1,47 @@
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.example-radio-button {
+  margin: 5px;
+}
+
+.input-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.input-form-full-width {
+  width: 100%;
+}
+
+.top-statement {
+  margin: 40px;
+}
+
+.submit {
+  margin-left: 40px;
+}
+
+.container {
+  height: 80%;
+}
+
+.survey-complete-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 65%;
+}
+
+
+.survey-complete {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

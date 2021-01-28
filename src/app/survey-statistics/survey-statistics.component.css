@@ -1,0 +1,26 @@
+table {
+  width: 100%;
+}
+
+tr.mat-footer-row {
+  font-weight: bold;
+}
+
+.bold-header {
+  font-weight: bold;
+  margin-left: 10px;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+.question1 {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.question2 {
+  font-weight: bold;
+  font-size: 22px;
+}
