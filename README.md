@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Run application without codebase
 
-View application at https://survey-hosting.web.app/new-survey, hosted via Firebase.
+View application at https://survey-hosting.web.app, hosted via Firebase.
 
 ## Development server
 
