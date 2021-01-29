@@ -18,12 +18,10 @@
   width: 100%;
 }
 
-.top-statement {
-  margin: 40px;
-}
-
 .submit {
-  margin-left: 40px;
+  margin-top:10px;
+  margin-bottom:25px;
+  background-color: #2E5A88;
 }
 
 .container {
@@ -44,4 +42,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.card-header {
+  background-color: #4984b841;
+}
+
+mat-card {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background-color: #ffffff;
+  border-radius: 10px;
 }

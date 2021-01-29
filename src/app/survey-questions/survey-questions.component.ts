@@ -26,7 +26,6 @@ export class SurveyQuestionsComponent implements OnInit {
     'Other'];
     surveyComplete = false;
 
-
   constructor(private surveyDataService: SurveyDataService) { }
 
   ngOnInit() {
@@ -39,11 +38,8 @@ export class SurveyQuestionsComponent implements OnInit {
     });
   }
 
-
-
   submit() {
     this.surveyComplete = true;
     this.surveyDataService.submitSurvey(this.surveyForm.value);
   }
-
 }

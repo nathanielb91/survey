@@ -1,5 +1,5 @@
-<mat-toolbar color="primary">
-  <button mat-icon-button class="example-icon" [matMenuTriggerFor]="menu" aria-label="Example icon-button with menu icon">
+<mat-toolbar>
+  <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Menu icon">
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
@@ -12,6 +12,6 @@
       <span><a class="menu-link" routerLink="/survey-statistics">Survey Statistics</a></span>
     </button>
   </mat-menu>
-  <span class="toolbar-name">Survey by Overspecified Websites Inc.</span>
-  <span class="example-spacer"></span>
+  <span class="toolbar-name" style="overflow: hidden;">Survey by Overspecified Websites Inc.</span>
+  <span class="spacer"></span>
 </mat-toolbar>

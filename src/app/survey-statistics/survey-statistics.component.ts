@@ -36,7 +36,6 @@ export class SurveyStatisticsComponent implements OnInit {
   minGreenThings: number;
   maxGreenThings: number;
 
-
   constructor(private surveyDataService: SurveyDataService) { }
 
   ngOnInit() {
@@ -63,12 +62,6 @@ export class SurveyStatisticsComponent implements OnInit {
       this.minGreenThings = Math.min(...this.q4answersArr);
       this.maxGreenThings = Math.max(...this.q4answersArr);
     });
-
-
-  }
-
-  logposts() {
-    console.log(this.q4answersArr);
   }
 
   q1Totals(questionArray: string[]) {
@@ -85,9 +78,6 @@ export class SurveyStatisticsComponent implements OnInit {
             break;
         }
     }
-    console.log(questionArray[0] + '  was answered ' + this.q1Option1Total + ' times!');
-    console.log(questionArray[1] + '  was answered ' + this.q1Option2Total + ' times!');
-    console.log(questionArray[2] + '  was answered ' + this.q1Option3Total + ' times!');
   }
 
   q2Totals(questionArray: string[]) {
@@ -101,13 +91,10 @@ export class SurveyStatisticsComponent implements OnInit {
             break;
         }
     }
-    console.log(questionArray[0] + '  was answered ' + this.q2Option1Total + ' times!');
-    console.log(questionArray[1] + '  was answered ' + this.q2Option2Total + ' times!');
   }
 
   q3Totals(questionArray) {
     const colorsObj = questionArray.flat().reduce((a, v) => (a[v] = (a[v] || 0) + 1, a), {});
-    console.log(colorsObj);
     this.brownTotal = colorsObj.Brown;
     this.blueTotal = colorsObj.Blue;
     this.greenTotal = colorsObj.Green;
@@ -126,5 +113,8 @@ export class SurveyStatisticsComponent implements OnInit {
     this.avgGreenThings = total / questionArray.length;
   }
 
-
+  // unused function in place of sending array data to google sheets api
+  submitStatsGoogleSheets() {
+    // this.surveyDataService.submitToGoogleSheets();
+  }
 }

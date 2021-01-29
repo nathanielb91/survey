@@ -11,16 +11,19 @@ tr.mat-footer-row {
   margin-left: 10px;
 }
 
-.bold-text {
-  font-weight: bold;
+.table-responsive {
+  margin-bottom: 25px;
 }
 
-.question1 {
-  font-weight: bold;
-  font-size: 25px;
+
+.send-stats {
+  float: right;
+  margin-right: 20px;
+  padding-bottom: 50px;
 }
 
-.question2 {
-  font-weight: bold;
-  font-size: 22px;
+.send-stats-btn {
+  height: 55px;
+  width: 180px;
+  font-size: 17px;
 }

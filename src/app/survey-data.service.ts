@@ -11,7 +11,8 @@ export class SurveyDataService {
   constructor(private http: HttpClient) { }
 
   submitSurvey(surveyData: any) {
-    this.http.post('https://survey-383aa-default-rtdb.firebaseio.com/posts.json', surveyData).subscribe(responseData => {});
+    this.http.post('https://survey-383aa-default-rtdb.firebaseio.com/posts.json', surveyData).subscribe(responseData => {
+    });
   }
 
   getSurveyData() {
@@ -27,8 +28,11 @@ export class SurveyDataService {
     }));
   }
 
-  // getData2() {
-  //   return this.http.get('https://survey-383aa-default-rtdb.firebaseio.com/posts.json');
-  // }
-
+/*
+  unused function for attempt to send stats to google sheets api
+  submitToGoogleSheets() {
+    this.http.post('https://googlesheetsapi.com......', surveyData).subscribe(responseData => {
+    });
+  }
+  */
 }
